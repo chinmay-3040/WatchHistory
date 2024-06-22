@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-full h-full bg-zinc-900 p-10 text-white">
+
+        <div class="nav mb-10">
+            <a class="text-green-400" href="/read">Back to series list</a>
+        </div>
+
+        <h1 class="text-3xl tracking-tighter mb-3 ">Update your series</h1>
+        <form action="/update/<%= series._id %>" method="post">
+            <input class="px-5 py-2 bg-transparent text-white border-2 border-zinc-800 rounded-lg outline:none" value="<%= series.name %>" name="name" type="text" placeholder="name">
+            <input class="px-5 py-2 bg-transparent text-white border-2 border-zinc-800 rounded-lg outline:none" value="<%= series.imageUrl %>" name="imageurl" type="text" placeholder="imageurl">
+            <input class="px-5 py-2 bg-transparent text-white border-2 border-zinc-800 rounded-lg outline:none" value="<%= series.seasons %>" name="seasons" type="number" placeholder="seasons">
+            <input class="px-5 py-2 bg-transparent text-white border-2 border-zinc-800 rounded-lg outline:none" value="<%= series.category %>" name="category" type="text" placeholder="category">
+            <input class="px-5 py-2 bg-orange-500 rounded-lg ml-3" type="submit" value="Update Series">
+        </form>
+    </div>
+</body>
+</html>
